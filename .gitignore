@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+#arquivo de especificações do desafio
+Desafio-Next.Js-2023.2.pdf
+
 # testing
 /coverage
 
