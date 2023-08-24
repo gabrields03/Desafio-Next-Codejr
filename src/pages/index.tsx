@@ -1,13 +1,12 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Image } from "@/components/Image";
+import { Stack } from "@chakra-ui/react";
 
 export default function Home() {
   return (
-    <>
-    </>
+    <Stack>
+      <Stack>
+        <Image src={"/capa.png"} alt={"Imagem de capa da página inical"} width={1440} height={480}/>
+      </Stack>
+    </Stack>
   )
 }

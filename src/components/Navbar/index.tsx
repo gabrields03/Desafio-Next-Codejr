@@ -14,8 +14,8 @@ export function Navbar() {
             top={0}
             zIndex={10000}
         >   
-            <Image src={"/logo-branca.png"} alt={"Logo da Codejr"} width={80} height={80}/>
-            <Image src={"/TechUnix.png"} alt={"Logo da Codejr"} width={179} height={31}/>
+            <Image src={"/logo-branca.png"} alt={"Logo TechUnix"} width={80} height={80}/>
+            <Image src={"/TechUnix.png"} alt={"Logo TechUnix"} width={179} height={31}/>
             <LinkNavBar href={"/"} text={"Página Inicial"} />
             <LinkNavBar href={""} text={"Login"} />
             <LinkNavBar href={""} text={"Contato"} />
