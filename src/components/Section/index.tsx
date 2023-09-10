@@ -8,12 +8,10 @@ export function SectionIndex() {
             bgImage="url('/capa.png')"
             bgRepeat={"no-repeat"}
             bgSize={"100%"}
-            p={12}
+            height={"600px"}
         >       
 
-            <Stack>
-                <TitleIndex color={"#FFF"} text={"Super"}/>
-            </Stack>
+            
 
         </Box>
     )

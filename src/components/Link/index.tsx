@@ -12,8 +12,9 @@ export function LinkNavBar({ href, text }:LinkNavBarProps){
             as={NextLink}
             href={href}
             color={"#FFF"}
-            fontSize={"16px"}
+            fontSize={"24px"}
             fontWeight={400}
+            textDecoration={"none"}
         >
             {text}
         </Link>
