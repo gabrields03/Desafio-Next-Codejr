@@ -2,6 +2,9 @@ import { Stack } from "@chakra-ui/react";
 
 import { Image } from "../Image";
 import { TextBold, TextProducts } from "../Text";
+import { InputIndex } from "../Form";
+import { TitleIndex } from "../Title";
+import { ButtonLogin } from "../Button";
 
 interface CardProps {
     src: string;
@@ -23,8 +26,69 @@ export function Card({ src, alt, text, text2 }: CardProps) {
                 <Stack
                     spacing={0}
                 >
-                    <TextBold text={text2} color={"green"} fontSize={"24px"} textAlign={"left"}/>
+                    <TextBold text={text2} color={"green"} fontSize={"24px"} textAlign={"left"} />
                     <TextProducts size={"12px"} textAlign={"left"} text={"no PIX com 15% de desconto"} color={"fontColor"} />
+                </Stack>
+            </Stack>
+        </Stack>
+    )
+}
+
+export function CardLogin() {
+    return (
+        <Stack
+            as={"section"}
+            align={"center"}
+        >
+
+            <Stack
+
+                align={"center"}
+                px={36}
+                py={32}
+                bg={"blue"}
+                width={"35%"}
+                spacing={20}
+                borderRadius={10}
+                boxShadow={"3px 3px 10px #00000060"}
+            >
+
+                <TitleIndex text={"Login"} />
+                <Stack
+                    align={"center"}
+                    width={"100%"}
+                    spacing={16}
+                >
+
+                    <Stack
+                        align={"center"}
+                        width={"100%"}
+                    >
+                        <InputIndex label={"Usuário"} type={"text"} w={"100%"} placeholder={""} />
+                        <InputIndex label={"Senha"} type={"password"} w={"100%"} placeholder={""} />
+                    </Stack>
+
+                    <Stack
+                        align={"center"}
+                        width={"100%"}
+                        spacing={10}
+                    >
+                        <Stack
+                            align={"center"}
+                            width={"100%"}
+                        >
+                            <ButtonLogin textButton={"Entrar"} href={"/gerenciamento"} color={"#1EB01B"} colorHover={"#328030"} />
+                            <TextProducts size={"12px"} textAlign={"left"} text={"Esqueci minha senha"} color={"fontColor"} />
+                        </Stack>
+
+                        <Stack
+                            align={"center"}
+                            width={"100%"}
+                        >
+                            <TextProducts size={"12px"} textAlign={"left"} text={"Novo por aqui?"} color={"fontColor"} />
+                            <ButtonLogin textButton={"Cadastre-se"} href={"#"} color={"#AB1616"} colorHover={"#9F1116"} />
+                        </Stack>
+                    </Stack>
                 </Stack>
             </Stack>
         </Stack>

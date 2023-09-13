@@ -1,7 +1,6 @@
 import { HStack } from "@chakra-ui/react";
 
 import { LinkImage, LinkNavBar } from "../Link";
-import { Image } from "../Image";
 
 export function Navbar() {
     return (
@@ -14,6 +13,7 @@ export function Navbar() {
             position={"sticky"}
             top={0}
             zIndex={10000}
+            boxShadow={"0px 3px 10px #00000060"}
         >   
             <HStack
             spacing={0}
@@ -27,10 +27,10 @@ export function Navbar() {
             justify={"right"}
             >
                 <LinkNavBar href={"./"} text={"Página Inicial"} />
-                <LinkNavBar href={""} text={"Login"} />
-                <LinkNavBar href={""} text={"Contato"} />
-                <LinkNavBar href={""} text={"Membros"} />
-                <LinkNavBar href={""} text={"Gerenciamento"} />
+                <LinkNavBar href={"/login"} text={"Login"} />
+                <LinkNavBar href={"/contato"} text={"Contato"} />
+                <LinkNavBar href={"/membros"} text={"Membros"} />
+                <LinkNavBar href={"/gerenciamento"} text={"Gerenciamento"} />
             </HStack>
         </HStack>
     )
