@@ -6,6 +6,7 @@ export const theme = extendTheme ({
         green: "#1EB01B",
         blue: "#494856",
         fontColor: "#C1CEDA",
+        black: "#111111",
     },
 
     styles: {

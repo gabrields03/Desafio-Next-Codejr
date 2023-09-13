@@ -1,7 +1,7 @@
 import { Stack } from "@chakra-ui/react";
 
 import { Image } from "../Image";
-import { TextProducts } from "../Text";
+import { TextBold, TextProducts } from "../Text";
 
 interface CardProps {
     src: string;
@@ -23,7 +23,7 @@ export function Card({ src, alt, text, text2 }: CardProps) {
                 <Stack
                     spacing={0}
                 >
-                    <TextProducts size={"28px"} textAlign={"left"} text={text2} color={"green"} />
+                    <TextBold text={text2} color={"green"} fontSize={"24px"} textAlign={"left"}/>
                     <TextProducts size={"12px"} textAlign={"left"} text={"no PIX com 15% de desconto"} color={"fontColor"} />
                 </Stack>
             </Stack>

@@ -24,3 +24,26 @@ export function TextProducts({ size, textAlign, text, color, w }: TextProductsPr
         </Text>
     )
 }
+
+interface TextProductsPrecoProps {
+    text: string
+    color: string
+    fontSize: string
+    textAlign: any
+}
+
+export function TextBold({ text, color, fontSize, textAlign }: TextProductsPrecoProps) {
+    return (
+        <Text
+            as="p"
+            color={color}
+            fontSize={fontSize}
+            fontWeight={700}
+            textAlign={textAlign}
+        >
+
+            {text}
+
+        </Text>
+    )
+}

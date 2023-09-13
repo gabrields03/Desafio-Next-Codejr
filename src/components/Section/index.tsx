@@ -2,6 +2,7 @@ import { Box, HStack, Stack } from "@chakra-ui/react";
 
 import { TitleIndex } from "../Title";
 import { Card } from "../Card";
+import { Image } from "../Image";
 
 export function SectionIndex() {
     return (
@@ -25,7 +26,7 @@ export function SectionIndexProducts() {
 
             <TitleIndex text={"Produtos em destaque"} />
             <HStack
-                spacing={32}
+                spacing={24}
             >
                 <Card src={"/computador.png"} alt={"Computador"} text={"Computador Gamer, Intel i7-13400, GeForce RTX 3060"} text2={"R$ 6.500,90"} />
                 <Card src={"/headseat.png"} alt={"Headseat"} text={"Fone de ouvido Tune 720BT, Wireless, Branco"} text2={"R$ 260,90"} />
@@ -34,7 +35,7 @@ export function SectionIndexProducts() {
             </HStack>
 
             <HStack
-                spacing={32}
+                spacing={24}
             >
                 <Card src={"/mouse.png"} alt={"Mouse"} text={"Mouse Raptor Series OM-801, Wireless, Preto"} text2={"R$ 59,90"} />
                 <Card src={"/monitor.png"} alt={"Monitor"} text={"Monitor Gamer, 27 PoL, 165Hz, 1ms, HDMI"} text2={"R$ 1.499,90"} />
@@ -42,7 +43,7 @@ export function SectionIndexProducts() {
                 <Card src={"/headseat.png"} alt={"Headseat"} text={"Fone de ouvido Tune 720BT, Wireless, Branco"} text2={"R$ 260,90"} />
             </HStack>
             <HStack
-                spacing={32}
+                spacing={24}
             >
                 <Card src={"/computador.png"} alt={"Computador"} text={"Computador Gamer, Intel i7-13400, GeForce RTX 3060"} text2={"R$ 6.500,90"} />
                 <Card src={"/headseat.png"} alt={"Headseat"} text={"Fone de ouvido Tune 720BT, Wireless, Branco"} text2={"R$ 260,90"} />
@@ -51,7 +52,7 @@ export function SectionIndexProducts() {
             </HStack>
 
             <HStack
-                spacing={32}
+                spacing={24}
             >
                 <Card src={"/mouse.png"} alt={"Mouse"} text={"Mouse Raptor Series OM-801, Wireless, Preto"} text2={"R$ 59,90"} />
                 <Card src={"/monitor.png"} alt={"Monitor"} text={"Monitor Gamer, 27 PoL, 165Hz, 1ms, HDMI"} text2={"R$ 1.499,90"} />
@@ -59,6 +60,29 @@ export function SectionIndexProducts() {
                 <Card src={"/headseat.png"} alt={"Headseat"} text={"Fone de ouvido Tune 720BT, Wireless, Branco"} text2={"R$ 260,90"} />
             </HStack>
 
+        </Stack>
+    )
+}
+
+export function SectionIndexPromotionProducts(){
+    return(
+        <Stack
+            as={"section"}
+            spacing={20}
+            align={"center"}
+            bg={"black"}
+            p={20}
+        >
+
+            <TitleIndex text={"Produtos em promoção"}/>
+
+            <HStack
+            spacing={10}
+            >
+                <Image src={"/computador-promo.png"} alt={"Computador"} width={350} height={500}/>
+                <Image src={"/mouse-promo.png"} alt={"Mouse"} width={350} height={500}/>
+                <Image src={"/monitor-promo.png"} alt={"Monitor"} width={350} height={500}/>
+            </HStack>
         </Stack>
     )
 }

@@ -1,8 +1,6 @@
 import { Stack } from "@chakra-ui/react";
 
-import { SectionIndex, SectionIndexProducts } from "@/components/Section";
-import { Card } from "@/components/Card";
-import { TitleIndex } from "@/components/Title";
+import { SectionIndex, SectionIndexProducts, SectionIndexPromotionProducts } from "@/components/Section";
 
 export default function Home() {
   return (
@@ -14,8 +12,10 @@ export default function Home() {
 
       <Stack
         as={"article"}
+        spacing={20}
       >
         <SectionIndexProducts />
+        <SectionIndexPromotionProducts/>
       </Stack>
     </Stack>
   )

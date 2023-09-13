@@ -1,15 +1,13 @@
 import { HStack, Stack } from "@chakra-ui/react";
 
 import { Image } from "../Image";
-import { TextProducts } from "../Text";
+import { TextBold, TextProducts } from "../Text";
 import { LinkImage } from "../Link";
 
 export function Footer() {
     return (
         <HStack
-            px={10}
-            paddingBottom={10}
-            paddingTop={40}
+            p={12}
             spacing={300}
             justify={"center"}
 
@@ -30,8 +28,8 @@ export function Footer() {
                 <Stack
                     spacing={1}
                 >
-                    <TextProducts size={"20px"} textAlign={"justify"} text={"TechUnix é uma empresa de venda de produtos de informática. As fotos contidas nesta página são meramente ilustrativas e podem variar de acordo com o fornecedor/lote do fabricante."} color={"red"} />
-                    <TextProducts size={"12px"} textAlign={"justify"} text={"Rua José Lourenço Kelmer, UFJF,Instituto de Ciências Exatas, sala 3313"} color={"fontColor"} />
+                    <TextBold fontSize={"20px"} textAlign={"justify"} text={"TechUnix é uma empresa de venda de produtos de informática. As fotos contidas nesta página são meramente ilustrativas e podem variar de acordo com o fornecedor/lote do fabricante."} color={"red"} />
+                    <TextProducts size={"16px"} textAlign={"justify"} text={"Rua José Lourenço Kelmer, UFJF,Instituto de Ciências Exatas, sala 3313"} color={"fontColor"} />
                 </Stack>
 
                 <Stack
