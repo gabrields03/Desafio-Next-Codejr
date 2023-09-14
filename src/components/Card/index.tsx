@@ -77,7 +77,7 @@ export function CardLogin() {
                             align={"center"}
                             width={"100%"}
                         >
-                            <ButtonLogin textButton={"Entrar"} href={"/gerenciamento"} color={"#1EB01B"} colorHover={"#328030"} />
+                            <ButtonLogin textButton={"Entrar"} href={"/gerenciamento"} color={"#1EB01B"} colorHover={"#328030"} w={"100%"} />
                             <TextProducts size={"12px"} textAlign={"left"} text={"Esqueci minha senha"} color={"fontColor"} />
                         </Stack>
 
@@ -86,11 +86,25 @@ export function CardLogin() {
                             width={"100%"}
                         >
                             <TextProducts size={"12px"} textAlign={"left"} text={"Novo por aqui?"} color={"fontColor"} />
-                            <ButtonLogin textButton={"Cadastre-se"} href={"#"} color={"#AB1616"} colorHover={"#9F1116"} />
+                            <ButtonLogin textButton={"Cadastre-se"} href={"#"} color={"#AB1616"} colorHover={"#9F1116"} w={"100%"} />
                         </Stack>
                     </Stack>
                 </Stack>
             </Stack>
+        </Stack>
+    )
+}
+
+export function CardContato(){
+    return(
+        <Stack
+            as={"section"}
+            p={10}
+            w={"100%"}
+            bg={"red"}
+            borderRadius={10}
+        >
+            <TextBold text={"Telefone de contato"} color={"black"} fontSize={"24px"}/>
         </Stack>
     )
 }

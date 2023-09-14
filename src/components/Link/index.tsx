@@ -17,6 +17,10 @@ export function LinkNavBar({ href, text }:LinkNavBarProps){
             fontSize={"20px"}
             fontWeight={400}
             textDecoration={"none"}
+            _hover={{
+                textDecoration:"none",
+                color:"red"
+            }}
         >
             {text}
         </Link>

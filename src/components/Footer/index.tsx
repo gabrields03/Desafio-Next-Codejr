@@ -3,6 +3,7 @@ import { HStack, Stack } from "@chakra-ui/react";
 import { Image } from "../Image";
 import { TextBold, TextProducts } from "../Text";
 import { LinkImage } from "../Link";
+import { SectionSigaNos } from "../Section";
 
 export function Footer() {
     return (
@@ -45,14 +46,7 @@ export function Footer() {
             <Stack
                 spacing={5}
             >
-                <TextProducts size={"24px"} textAlign={"center"} text={"Siga-nos"} color={"fontColor"} />
-
-                <HStack>
-                    <LinkImage href={"https://www.instagram.com"} src={"/instagram.png"} alt={"Logo do instagram"} width={50} height={50} target={"_blank"} />
-                    <LinkImage href={"https://www.facebook.com"} src={"/facebook-logo.png"} alt={"Logo do facebook"} width={50} height={50} target={"_blank"} />
-                    <LinkImage href={"https://twitter.com"} src={"/twitter.png"} alt={"Logo do twitter"} width={50} height={50} target={"_blank"} />
-                    <LinkImage href={"https://www.youtube.com"} src={"/youtube.png"} alt={"Logo do youtube"} width={50} height={50} target={"_blank"} />
-                </HStack>
+                <SectionSigaNos size={"24px"} width={50} text={"Siga-nos"}/>
             </Stack>
         </HStack>
     )

@@ -3,6 +3,8 @@ import { Box, HStack, Stack } from "@chakra-ui/react";
 import { TitleIndex } from "../Title";
 import { Card } from "../Card";
 import { Image } from "../Image";
+import { LinkImage } from "../Link";
+import { TextProducts } from "../Text";
 
 export function SectionIndex() {
     return (
@@ -84,5 +86,26 @@ export function SectionIndexPromotionProducts(){
                 <Image src={"/monitor-promo.png"} alt={"Monitor"} width={350} height={500}/>
             </HStack>
         </Stack>
+    )
+}
+
+interface SectionSigaNosProps{
+    size: string
+    width: number
+    text: string
+}
+
+export function SectionSigaNos({ size, width, text }:SectionSigaNosProps){
+    return(
+        <>
+        <TextProducts size={size} textAlign={"center"} text={text} color={"fontColor"} />
+
+                <HStack>
+                    <LinkImage href={"https://www.instagram.com"} src={"/instagram.png"} alt={"Logo do instagram"} width={width} height={width} target={"_blank"} />
+                    <LinkImage href={"https://www.facebook.com"} src={"/facebook-logo.png"} alt={"Logo do facebook"} width={width} height={width} target={"_blank"} />
+                    <LinkImage href={"https://twitter.com"} src={"/twitter.png"} alt={"Logo do twitter"} width={width} height={width} target={"_blank"} />
+                    <LinkImage href={"https://www.youtube.com"} src={"/youtube.png"} alt={"Logo do youtube"} width={width} height={width} target={"_blank"} />
+                </HStack>
+        </>
     )
 }

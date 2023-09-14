@@ -29,7 +29,7 @@ interface TextProductsPrecoProps {
     text: string
     color: string
     fontSize: string
-    textAlign: any
+    textAlign?: any
 }
 
 export function TextBold({ text, color, fontSize, textAlign }: TextProductsPrecoProps) {

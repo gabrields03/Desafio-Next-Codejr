@@ -16,3 +16,20 @@ export function TitleIndex({ text }: TitleIndexProps) {
         </Heading>
     )
 }
+
+interface TitleSecondaryProps {
+    text: string
+}
+
+export function TitleSecondary({ text }: TitleSecondaryProps) {
+    return (
+        <Heading
+            as="h2"
+            fontSize={"48px"}
+            color={"fontColor"}
+            fontWeight={400}
+        >
+            {text}
+        </Heading>
+    )
+}
