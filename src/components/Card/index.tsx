@@ -6,6 +6,8 @@ import { InputIndex } from "../Form";
 import { TitleIndex } from "../Title";
 import { ButtonLogin } from "../Button";
 import { ReactNode } from "react";
+import { ArrowBackIcon } from "@chakra-ui/icons";
+import { LinkIcon } from "../Link";
 
 interface CardProps {
     src: string;
@@ -54,7 +56,17 @@ export function CardLogin() {
                 boxShadow={"3px 3px 10px #00000060"}
             >
 
-                <TitleIndex text={"Login"} />
+                <HStack
+                    w={"100%"}
+                    align={"center"}
+                    spacing={32}
+                >
+                    <LinkIcon href={"/"} target={"_self"}>
+                    <ArrowBackIcon boxSize={8} color={"fontColor"}/>
+                    </LinkIcon>
+                    
+                    <TitleIndex text={"Login"}/>
+                </HStack>
                 <Stack
                     align={"center"}
                     width={"100%"}

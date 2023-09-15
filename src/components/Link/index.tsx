@@ -2,6 +2,7 @@ import { Link } from "@chakra-ui/react";
 import NextLink from 'next/link';
 
 import { Image } from "../Image";
+import { ReactNode } from "react";
 
 interface LinkNavBarProps{
     href: string
@@ -47,6 +48,25 @@ export function LinkImage({ href, src, alt, width, height, target }:LinkImagePro
 
             <Image src={src} alt={alt} width={width} height={height}/>
 
+        </Link>
+    )
+}
+
+interface LinkIconProps{
+    href: string
+    target: string
+    children: ReactNode
+}
+
+export function LinkIcon({ href, target, children }:LinkIconProps){
+    return(
+        <Link
+            as={NextLink}
+            href={href}
+            textDecoration={"none"}
+            target={target}
+        >
+            {children}
         </Link>
     )
 }
