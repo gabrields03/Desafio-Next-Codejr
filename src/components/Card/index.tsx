@@ -1,10 +1,11 @@
-import { Stack } from "@chakra-ui/react";
+import { HStack, Stack } from "@chakra-ui/react";
 
 import { Image } from "../Image";
 import { TextBold, TextProducts } from "../Text";
 import { InputIndex } from "../Form";
 import { TitleIndex } from "../Title";
 import { ButtonLogin } from "../Button";
+import { ReactNode } from "react";
 
 interface CardProps {
     src: string;
@@ -95,7 +96,13 @@ export function CardLogin() {
     )
 }
 
-export function CardContato(){
+interface CardContatoProps{
+    text: string
+    text1: string
+    children: ReactNode
+}
+
+export function CardContato({ text, text1, children }:CardContatoProps){
     return(
         <Stack
             as={"section"}
@@ -104,7 +111,12 @@ export function CardContato(){
             bg={"red"}
             borderRadius={10}
         >
-            <TextBold text={"Telefone de contato"} color={"black"} fontSize={"24px"}/>
+            
+            <HStack>
+                {children}
+                <TextBold text={text} color={"black"} fontSize={"24px"}/>
+            </HStack>
+            <TextProducts size={"20px"} textAlign={"justify"} text={text1} color={"black"}/>
         </Stack>
     )
 }

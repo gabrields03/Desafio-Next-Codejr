@@ -13,7 +13,7 @@ export function InputIndex({ label, type, w, placeholder }:InputIndexProps) {
             w={w}
             isRequired
         >
-            <FormLabel color={"fontColor"} >{label}</FormLabel>
+            <FormLabel color={"fontColor"}  fontSize={18}>{label}</FormLabel>
             <Input 
             type={type} 
             placeholder={placeholder} 
@@ -37,7 +37,7 @@ export function InputTextArea({ label, w }:InputTextAreaProps) {
             w={w}
             isRequired
         >
-            <FormLabel color={"fontColor"} >{label}</FormLabel>
+            <FormLabel color={"fontColor"} fontSize={18}>{label}</FormLabel>
             <Textarea 
             height={"25rem"} 
             color={"fontColor"} 

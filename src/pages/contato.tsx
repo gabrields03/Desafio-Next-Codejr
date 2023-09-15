@@ -1,9 +1,11 @@
+import { HStack, Stack } from "@chakra-ui/react";
+import { PhoneIcon, EmailIcon } from '@chakra-ui/icons'
+
 import { ButtonLogin } from "@/components/Button";
 import { CardContato } from "@/components/Card";
 import { InputIndex, InputTextArea } from "@/components/Form";
 import { SectionSigaNos } from "@/components/Section";
 import { TitleIndex, TitleSecondary } from "@/components/Title";
-import { HStack, Stack, Textarea } from "@chakra-ui/react";
 
 export default function Contato() {
     return (
@@ -56,8 +58,12 @@ export default function Contato() {
                     px={20}
                     spacing={6}
                 >
-                    <CardContato/>
-                    <CardContato/>
+                    <CardContato text={"Telefone de Contato"} text1={"Você pode entrar em contato através do telefone: (32) 99965-3479. Atendimento de Segunda a Sexta 8hr às 12hr e das 13hr às 18hr."}>
+                        <PhoneIcon boxSize={5} />
+                    </CardContato>
+                    <CardContato text={"E-mail de contato"} text1={"Você também pode entrar em contato através do email: contato@techunix.com.br."}>
+                        <EmailIcon boxSize={6}/>
+                    </CardContato>
                 </Stack>
             </Stack>
 
