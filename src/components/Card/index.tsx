@@ -55,17 +55,18 @@ export function CardLogin() {
                 borderRadius={10}
                 boxShadow={"3px 3px 10px #00000060"}
             >
-
+               
                 <HStack
                     w={"100%"}
-                    align={"center"}
-                    spacing={32}
+                    justify={"center"}
+                    position={"relative"}
                 >
+
+
+                    <TitleIndex text={"Login"} />
                     <LinkIcon href={"/"} target={"_self"}>
-                    <ArrowBackIcon boxSize={8} color={"fontColor"}/>
-                    </LinkIcon>
-                    
-                    <TitleIndex text={"Login"}/>
+                    <ArrowBackIcon boxSize={8} color={"fontColor"} />
+                </LinkIcon>
                 </HStack>
                 <Stack
                     align={"center"}
@@ -108,14 +109,14 @@ export function CardLogin() {
     )
 }
 
-interface CardContatoProps{
+interface CardContatoProps {
     text: string
     text1: string
     children: ReactNode
 }
 
-export function CardContato({ text, text1, children }:CardContatoProps){
-    return(
+export function CardContato({ text, text1, children }: CardContatoProps) {
+    return (
         <Stack
             as={"section"}
             p={10}
@@ -123,12 +124,12 @@ export function CardContato({ text, text1, children }:CardContatoProps){
             bg={"red"}
             borderRadius={10}
         >
-            
+
             <HStack>
                 {children}
-                <TextBold text={text} color={"black"} fontSize={"24px"}/>
+                <TextBold text={text} color={"black"} fontSize={"24px"} />
             </HStack>
-            <TextProducts size={"20px"} textAlign={"justify"} text={text1} color={"black"}/>
+            <TextBold fontSize={"20px"} text={text1} color={"black"} />
         </Stack>
     )
 }

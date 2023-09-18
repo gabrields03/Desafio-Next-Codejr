@@ -27,10 +27,10 @@ export function Navbar() {
             justify={"right"}
             >
                 <LinkNavBar href={"./"} text={"Página Inicial"} />
-                <LinkNavBar href={"/login"} text={"Login"} />
                 <LinkNavBar href={"/contato"} text={"Contato"} />
                 <LinkNavBar href={"/membros"} text={"Membros"} />
                 <LinkNavBar href={"/gerenciamento"} text={"Gerenciamento"} />
+                <LinkNavBar href={"/login"} text={"Login"} />
             </HStack>
         </HStack>
     )

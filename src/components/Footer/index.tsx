@@ -2,16 +2,15 @@ import { HStack, Stack } from "@chakra-ui/react";
 
 import { Image } from "../Image";
 import { TextBold, TextProducts } from "../Text";
-import { LinkImage } from "../Link";
 import { SectionSigaNos } from "../Section";
 
 export function Footer() {
     return (
         <HStack
+            as={"footer"}
             p={12}
             spacing={300}
             justify={"center"}
-
         >
             <Stack
                 spacing={0}

@@ -15,7 +15,7 @@ export function LinkNavBar({ href, text }:LinkNavBarProps){
             as={NextLink}
             href={href}
             color={"#FFF"}
-            fontSize={"20px"}
+            fontSize={"22px"}
             fontWeight={400}
             textDecoration={"none"}
             _hover={{
@@ -65,6 +65,8 @@ export function LinkIcon({ href, target, children }:LinkIconProps){
             href={href}
             textDecoration={"none"}
             target={target}
+            position={"absolute"}
+            left={"-8px"}
         >
             {children}
         </Link>
