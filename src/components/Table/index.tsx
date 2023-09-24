@@ -1,6 +1,7 @@
 import { Grid, GridItem, Stack } from "@chakra-ui/react";
 import { TextBold, TextProducts } from "../Text";
 import React, { useEffect, useState } from "react"
+import { View } from "../Modals/View";
 
 interface Code {
     id: number;
@@ -22,7 +23,6 @@ export function TableMembros() {
     return (
         <Stack
             w={"100%"}
-            spacing={10}
         >
             <Stack>
                 <Grid templateColumns='repeat(4, 1fr)' gap={0}>
@@ -67,63 +67,71 @@ export function TableMembros() {
 
 
             <Stack>
-            {code.map((code)=>(
-                <Grid templateColumns='repeat(4, 1fr)' gap={0}>
-                    <GridItem
-                        display={"flex"}
-                        justifyContent={"center"}
-                        alignItems={"center"}
-                        h={14}
-                        borderRadius={"8px 0px 0px 8px"}
-                    >
-                        <TextProducts size={"20px"} textAlign={"center"} text={code.name} color={"fontColor"} />
-                    </GridItem>
+                {code.map((code) => (
+                    <Grid templateColumns='repeat(4, 1fr)' gap={0}>
+                        <GridItem
+                            display={"flex"}
+                            justifyContent={"center"}
+                            alignItems={"center"}
+                            h={14}
+                            borderRadius={"8px 0px 0px 8px"}
+                        >
+                            <TextProducts size={"20px"} textAlign={"center"} text={code.name} color={"fontColor"} />
+                        </GridItem>
 
-                    <GridItem
-                        display={"flex"}
-                        justifyContent={"center"}
-                        alignItems={"center"}
-                    >
-                        <TextProducts size={"20px"} textAlign={"center"} text={code.email} color={"fontColor"} />
-                    </GridItem>
+                        <GridItem
+                            display={"flex"}
+                            justifyContent={"center"}
+                            alignItems={"center"}
+                        >
+                            <TextProducts size={"20px"} textAlign={"center"} text={code.email} color={"fontColor"} />
+                        </GridItem>
 
-                    <GridItem
-                        display={"flex"}
-                        justifyContent={"center"}
-                        alignItems={"center"}
-                    >
-                        <TextProducts size={"20px"} textAlign={"center"} text={code.aniversario} color={"fontColor"} />
-                    </GridItem>
+                        <GridItem
+                            display={"flex"}
+                            justifyContent={"center"}
+                            alignItems={"center"}
+                        >
+                            <TextProducts size={"20px"} textAlign={"center"} text={code.aniversario} color={"fontColor"} />
+                        </GridItem>
 
-                    <GridItem
-                        display={"flex"}
-                        justifyContent={"center"}
-                        alignItems={"center"}
-                        borderRadius={"0px 8px 8px 0px"}
-                    >
-                        <TextProducts size={"20px"} textAlign={"center"} text={code.cargo} color={"fontColor"} />
-                    </GridItem>
-                </Grid>
-  ))}
+                        <GridItem
+                            display={"flex"}
+                            justifyContent={"center"}
+                            alignItems={"center"}
+                            borderRadius={"0px 8px 8px 0px"}
+                        >
+                            <TextProducts size={"20px"} textAlign={"center"} text={code.cargo} color={"fontColor"} />
+                        </GridItem>
+                    </Grid>
+                ))}
             </Stack>
         </Stack>
     )
 }
 
 export function TableGerenciamentoMembros() {
+    const [code, setCode] = useState<Code[]>([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3000/code')
+            .then((response) => response.json())
+            .then((data) => setCode(data))
+            .catch((error) => console.log(error));
+    }, []);
     return (
         <Stack
-            w={"90%"}
+            w={"100%"}
         >
-            <Grid templateColumns='repeat(5, 1fr)' gap={0}>
+            <Grid templateColumns='repeat(8, 1fr)' gap={5} bg={"red"} borderRadius={"8px 8px 8px 8px"} >
 
                 <GridItem
                     display={"flex"}
                     justifyContent={"center"}
                     alignItems={"center"}
-                    bg={"red"}
                     h={10}
-                    borderRadius={"8px 0px 0px 8px"}
+                    colStart={1}
+                    colEnd={3}
                 >
                     <TextBold fontSize={"20px"} textAlign={"center"} text={"Nome"} color={"black"} />
                 </GridItem>
@@ -132,7 +140,8 @@ export function TableGerenciamentoMembros() {
                     display={"flex"}
                     justifyContent={"center"}
                     alignItems={"center"}
-                    bg={"red"}
+                    colStart={3}
+                    colEnd={6}
                 >
                     <TextBold fontSize={"20px"} textAlign={"center"} text={"Email"} color={"black"} />
                 </GridItem>
@@ -141,7 +150,8 @@ export function TableGerenciamentoMembros() {
                     display={"flex"}
                     justifyContent={"center"}
                     alignItems={"center"}
-                    bg={"red"}
+                    colStart={6}
+                    colEnd={7}
                 >
                     <TextBold fontSize={"20px"} textAlign={"center"} text={"Aniversário"} color={"black"} />
                 </GridItem>
@@ -150,7 +160,8 @@ export function TableGerenciamentoMembros() {
                     display={"flex"}
                     justifyContent={"center"}
                     alignItems={"center"}
-                    bg={"red"}
+                    colStart={7}
+                    colEnd={8}
                 >
                     <TextBold fontSize={"20px"} textAlign={"center"} text={"Cargo"} color={"black"} />
                 </GridItem>
@@ -159,13 +170,72 @@ export function TableGerenciamentoMembros() {
                     display={"flex"}
                     justifyContent={"center"}
                     alignItems={"center"}
-                    bg={"red"}
-                    borderRadius={"0px 8px 8px 0px"}
+                    colStart={8}
+                    colEnd={9}
                 >
-                    <TextBold fontSize={"20px"} textAlign={"center"} text={"Açoes"} color={"black"} />
+                    <TextBold fontSize={"20px"} textAlign={"center"} text={"Ações"} color={"black"} />
                 </GridItem>
 
             </Grid>
+            <Stack>
+                {code.map((code) => (
+                    <Grid templateColumns='repeat(8, 1fr)' gap={5}>
+
+                        <GridItem
+                            display={"flex"}
+                            justifyContent={"center"}
+                            alignItems={"center"}
+                            h={14}
+                            colStart={1}
+                            colEnd={3}
+                        >
+                            <TextProducts size={"20px"} textAlign={"center"} text={code.name} color={"fontColor"} />
+                        </GridItem>
+
+                        <GridItem
+                            display={"flex"}
+                            justifyContent={"center"}
+                            alignItems={"center"}
+                            colStart={3}
+                            colEnd={6}
+                        >
+                            <TextProducts size={"20px"} textAlign={"center"} text={code.email} color={"fontColor"} />
+                        </GridItem>
+
+                        <GridItem
+                            display={"flex"}
+                            justifyContent={"center"}
+                            alignItems={"center"}
+                            colStart={6}
+                            colEnd={7}
+                        >
+                            <TextProducts size={"20px"} textAlign={"center"} text={code.aniversario} color={"fontColor"} />
+                        </GridItem>
+
+                        <GridItem
+                            display={"flex"}
+                            justifyContent={"center"}
+                            alignItems={"center"}
+                            colStart={7}
+                            colEnd={8}
+                        >
+                            <TextProducts size={"20px"} textAlign={"center"} text={code.cargo} color={"fontColor"} />
+                        </GridItem>
+
+                        <GridItem
+                            display={"flex"}
+                            justifyContent={"center"}
+                            alignItems={"center"}
+                            colStart={8}
+                            colEnd={9}
+                        >
+                            <View nome={code.name} email={code.email} aniversario={code.aniversario} cargo={code.cargo} />
+                        </GridItem>
+
+
+                    </Grid>
+                ))}
+            </Stack>
         </Stack>
     )
 }
