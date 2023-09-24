@@ -1,10 +1,27 @@
 import { Grid, GridItem, Stack } from "@chakra-ui/react";
 import { TextBold, TextProducts } from "../Text";
+import React, { useEffect, useState } from "react"
+
+interface Code {
+    id: number;
+    name: string;
+    email: string;
+    aniversario: string;
+    cargo: string;
+}
 
 export function TableMembros() {
+    const [code, setCode] = useState<Code[]>([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3000/code')
+            .then((response) => response.json())
+            .then((data) => setCode(data))
+            .catch((error) => console.log(error));
+    }, []);
     return (
         <Stack
-            w={"90%"}
+            w={"100%"}
             spacing={10}
         >
             <Stack>
@@ -50,129 +67,44 @@ export function TableMembros() {
 
 
             <Stack>
-
+            {code.map((code)=>(
                 <Grid templateColumns='repeat(4, 1fr)' gap={0}>
                     <GridItem
                         display={"flex"}
                         justifyContent={"center"}
                         alignItems={"center"}
-                        h={10}
+                        h={14}
                         borderRadius={"8px 0px 0px 8px"}
                     >
-                        <TextProducts size={"20px"} textAlign={"center"} text={"Gabriel Domingos"} color={"fontColor"} />
+                        <TextProducts size={"20px"} textAlign={"center"} text={code.name} color={"fontColor"} />
                     </GridItem>
 
                     <GridItem
                         display={"flex"}
                         justifyContent={"center"}
                         alignItems={"center"}
-
                     >
-                        <TextProducts size={"20px"} textAlign={"center"} text={"gabriel.domingos@codejr.com.br"} color={"fontColor"} />
+                        <TextProducts size={"20px"} textAlign={"center"} text={code.email} color={"fontColor"} />
                     </GridItem>
 
                     <GridItem
                         display={"flex"}
                         justifyContent={"center"}
                         alignItems={"center"}
-
                     >
-                        <TextProducts size={"20px"} textAlign={"center"} text={"19/11"} color={"fontColor"} />
+                        <TextProducts size={"20px"} textAlign={"center"} text={code.aniversario} color={"fontColor"} />
                     </GridItem>
 
                     <GridItem
                         display={"flex"}
                         justifyContent={"center"}
                         alignItems={"center"}
-
-
                         borderRadius={"0px 8px 8px 0px"}
                     >
-                        <TextProducts size={"20px"} textAlign={"center"} text={"Assessor"} color={"fontColor"} />
+                        <TextProducts size={"20px"} textAlign={"center"} text={code.cargo} color={"fontColor"} />
                     </GridItem>
                 </Grid>
-
-                <Grid templateColumns='repeat(4, 1fr)' gap={0}>
-                    <GridItem
-                        display={"flex"}
-                        justifyContent={"center"}
-                        alignItems={"center"}
-                        h={10}
-                        borderRadius={"8px 0px 0px 8px"}
-                    >
-                        <TextProducts size={"20px"} textAlign={"center"} text={"João Vitor Fernandes Ribeiro Carneiro Ramos"} color={"fontColor"} />
-                    </GridItem>
-
-                    <GridItem
-                        display={"flex"}
-                        justifyContent={"center"}
-                        alignItems={"center"}
-
-                    >
-                        <TextProducts size={"20px"} textAlign={"center"} text={"joaovitor.fernandes@codejr.com.br"} color={"fontColor"} />
-                    </GridItem>
-
-                    <GridItem
-                        display={"flex"}
-                        justifyContent={"center"}
-                        alignItems={"center"}
-
-                    >
-                        <TextProducts size={"20px"} textAlign={"center"} text={"19/11"} color={"fontColor"} />
-                    </GridItem>
-
-                    <GridItem
-                        display={"flex"}
-                        justifyContent={"center"}
-                        alignItems={"center"}
-
-
-                        borderRadius={"0px 8px 8px 0px"}
-                    >
-                        <TextProducts size={"20px"} textAlign={"center"} text={"Assessor"} color={"fontColor"} />
-                    </GridItem>
-                </Grid>
-
-                <Grid templateColumns='repeat(4, 1fr)' gap={0}>
-                    <GridItem
-                        display={"flex"}
-                        justifyContent={"center"}
-                        alignItems={"center"}
-                        h={10}
-                        borderRadius={"8px 0px 0px 8px"}
-                    >
-                        <TextProducts size={"20px"} textAlign={"center"} text={"Gabriel Domingos"} color={"fontColor"} />
-                    </GridItem>
-
-                    <GridItem
-                        display={"flex"}
-                        justifyContent={"center"}
-                        alignItems={"center"}
-
-                    >
-                        <TextProducts size={"20px"} textAlign={"center"} text={"gabriel.domingos@codejr.com.br"} color={"fontColor"} />
-                    </GridItem>
-
-                    <GridItem
-                        display={"flex"}
-                        justifyContent={"center"}
-                        alignItems={"center"}
-
-                    >
-                        <TextProducts size={"20px"} textAlign={"center"} text={"19/11"} color={"fontColor"} />
-                    </GridItem>
-
-                    <GridItem
-                        display={"flex"}
-                        justifyContent={"center"}
-                        alignItems={"center"}
-
-
-                        borderRadius={"0px 8px 8px 0px"}
-                    >
-                        <TextProducts size={"20px"} textAlign={"center"} text={"Assessor"} color={"fontColor"} />
-                    </GridItem>
-                </Grid>
+  ))}
             </Stack>
         </Stack>
     )

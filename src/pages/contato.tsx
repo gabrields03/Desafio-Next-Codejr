@@ -46,7 +46,7 @@ export default function Contato() {
                 as={"section"}
                 align={"left"}
                 w={"100%"}
-                px={28}
+                px={24}
                 spacing={10}
             >
                 <Stack
