@@ -55,6 +55,8 @@ export function Delete({ id }: DeleteProps) {
                 <ModalOverlay />
                 <ModalContent
                     top={20}
+                    bg={"#2F2F2F"}
+                    color={"fontColor"}
                 >
                     <ModalHeader>Deseja excluir o membro?</ModalHeader>
                     <ModalCloseButton />

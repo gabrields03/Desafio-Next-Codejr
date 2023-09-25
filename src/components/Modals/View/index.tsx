@@ -50,6 +50,8 @@ import {
           <ModalOverlay />
           <ModalContent
           top={20}
+          bg={"#2F2F2F"}
+          color={"fontColor"}
           >
             <ModalHeader>Visualização</ModalHeader>
             <ModalCloseButton />

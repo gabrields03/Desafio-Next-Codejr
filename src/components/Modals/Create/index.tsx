@@ -47,7 +47,7 @@ export function Create() {
 
     return (
         <>
-            <ButtonCreate onClick={onOpen}/>
+            <ButtonCreate onClick={onOpen} />
 
             <Modal
                 initialFocusRef={initialRef}
@@ -58,28 +58,30 @@ export function Create() {
                 <ModalOverlay />
                 <ModalContent
                     top={20}
+                    bg={"#2F2F2F"}
+                    color={"fontColor"}
                 >
                     <ModalHeader>Criar</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody pb={6}>
                         <FormControl>
                             <FormLabel>Nome</FormLabel>
-                            <Input ref={initialRef} placeholder={"Nome"} onChange={(event) => setNome(event.target.value)} />
+                            <Input ref={initialRef} onChange={(event) => setNome(event.target.value)} />
                         </FormControl>
 
                         <FormControl mt={4}>
                             <FormLabel>Email</FormLabel>
-                            <Input placeholder={"Email"} onChange={(event) => setEmail(event.target.value)} />
+                            <Input  onChange={(event) => setEmail(event.target.value)} />
                         </FormControl>
 
                         <FormControl mt={4}>
                             <FormLabel>Aniversário</FormLabel>
-                            <Input placeholder={"Aniversário"} onChange={(event) => setAniversario(event.target.value)} />
+                            <Input  onChange={(event) => setAniversario(event.target.value)} />
                         </FormControl>
 
                         <FormControl mt={4}>
                             <FormLabel>Cargo</FormLabel>
-                            <Input placeholder={"Cargo"} onChange={(event) => setCargo(event.target.value)} />
+                            <Input  onChange={(event) => setCargo(event.target.value)} />
                         </FormControl>
                     </ModalBody>
 

@@ -83,6 +83,8 @@ export function Edit({ id, nome, email, aniversario, cargo }: EditProps) {
                 <ModalOverlay />
                 <ModalContent
                     top={20}
+                    bg={"#2F2F2F"}
+                    color={"fontColor"}
                 >
                     <ModalHeader>Edição</ModalHeader>
                     <ModalCloseButton />

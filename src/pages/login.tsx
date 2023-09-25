@@ -6,7 +6,7 @@ export default function Login() {
     return (
             <Stack
                 as={"article"}
-                p={20}
+                py={24}
             >
                 <CardLogin />
             </Stack>
