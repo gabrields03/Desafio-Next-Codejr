@@ -28,3 +28,28 @@ export function ButtonLogin({ textButton, href, color, colorHover, w }: ButtonLo
         </Button>
     )
 }
+
+interface ButtonCreateProps{
+    onClick: any
+}
+
+export function ButtonCreate( {onClick}:ButtonCreateProps ){
+    return(
+        <Button
+        as={NextLink}
+        href={"#"}
+        bg={"green"}
+        color={"#000"}
+        fontSize={"24px"}
+        fontWeight={400}
+        py={6}
+        w={"10%"}
+        _hover={{
+            bg: "#328030"
+        }}
+        onClick={onClick}
+        >
+            Adicionar
+        </Button>
+    )
+}

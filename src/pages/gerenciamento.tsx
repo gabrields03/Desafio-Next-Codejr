@@ -1,9 +1,10 @@
-import { ButtonLogin } from "@/components/Button";
+import { HStack, Stack } from "@chakra-ui/react";
+
 import { Footer } from "@/components/Footer";
+import { Create } from "@/components/Modals/Create";
 import { Navbar } from "@/components/Navbar";
 import { TableGerenciamentoMembros } from "@/components/Table";
 import { TitleIndex } from "@/components/Title";
-import { HStack, Stack } from "@chakra-ui/react";
 
 export default function Gerenciamento() {
     return (
@@ -20,7 +21,8 @@ export default function Gerenciamento() {
                     justify={"space-between"}
                 >
                     <TitleIndex text={"Gerenciamento dos membros"} />
-                    <ButtonLogin textButton={"Adicionar"} href={"#"} color={"green"} colorHover={"#328030"} w={"10%"} />
+                    
+                    <Create/>
                 </HStack>
                 <Stack
                     align={"center"}
