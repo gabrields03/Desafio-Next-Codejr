@@ -45,15 +45,14 @@ export function CardLogin() {
         >
 
             <Stack
-
-                align={"center"}
-                px={36}
-                py={32}
+                px={[0, 0 , 0, 10, 10, 32, 32, 32]}
+                py={[0, 0 , 0, 10, 10, 32, 32, 32]}
                 bg={"blue"}
-                width={"35%"}
+                width={["90%", "90%", "90%", "80%", "70%", "70%", "50%", "30%"]}
                 spacing={20}
                 borderRadius={10}
                 boxShadow={"3px 3px 10px #00000060"}
+                
             >
                
                 <HStack

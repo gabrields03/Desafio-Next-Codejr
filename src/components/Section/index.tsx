@@ -29,7 +29,7 @@ export function SectionIndexProducts() {
             <TitleIndex text={"Produtos em destaque"} />
             <HStack
                 spacing={24}
-                flexDirection={['column', 'column', 'column', 'column', 'row']}
+                flexDirection={['column', 'column', 'column', 'column', 'column', 'row', 'row', 'row']}
             >
                 <Card src={"/computador.png"} alt={"Computador"} text={"Computador Gamer, Intel i7-13400, GeForce RTX 3060"} text2={"R$ 6.500,90"} />
                 <Card src={"/headseat.png"} alt={"Headseat"} text={"Fone de ouvido Tune 720BT, Wireless, Branco"} text2={"R$ 260,90"} />
