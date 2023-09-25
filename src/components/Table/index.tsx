@@ -3,6 +3,7 @@ import { TextBold, TextProducts } from "../Text";
 import React, { useEffect, useState } from "react"
 import { View } from "../Modals/View";
 import { Edit } from "../Modals/Edit";
+import { Delete } from "../Modals/Delete";
 
 interface Code {
     id: number;
@@ -231,10 +232,11 @@ export function TableGerenciamentoMembros() {
                             colEnd={9}
                         >
                             <HStack
-
+                                spacing={3}
                             >
                                 <View nome={code.name} email={code.email} aniversario={code.aniversario} cargo={code.cargo} />
                                 <Edit id={code.id} nome={code.name} email={code.email} aniversario={code.aniversario} cargo={code.cargo} />
+                                <Delete id={code.id} />
                             </HStack>
                         </GridItem>
 

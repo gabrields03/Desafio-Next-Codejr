@@ -1,20 +1,6 @@
 {
   "code": [
     {
-      "name": "Arthur Riccioppo Oliveira Pereira",
-      "email": "arthur.riccioppo@codejr.com.br",
-      "aniversario": "23/05",
-      "cargo": "gerente",
-      "id": 1
-    },
-    {
-      "id": 2,
-      "name": "Carlos Gustavo Ferreira Rezende",
-      "email": "carlos.gustavo@codejr.com.br",
-      "aniversario": "26/02",
-      "cargo": "gerente"
-    },
-    {
       "id": 3,
       "name": "Daniel Abib Brasil",
       "email": "daniel.abib@codejr.com.br",
