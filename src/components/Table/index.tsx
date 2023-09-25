@@ -1,7 +1,8 @@
-import { Grid, GridItem, Stack } from "@chakra-ui/react";
+import { Grid, GridItem, HStack, Stack } from "@chakra-ui/react";
 import { TextBold, TextProducts } from "../Text";
 import React, { useEffect, useState } from "react"
 import { View } from "../Modals/View";
+import { Edit } from "../Modals/Edit";
 
 interface Code {
     id: number;
@@ -229,7 +230,12 @@ export function TableGerenciamentoMembros() {
                             colStart={8}
                             colEnd={9}
                         >
-                            <View nome={code.name} email={code.email} aniversario={code.aniversario} cargo={code.cargo} />
+                            <HStack
+
+                            >
+                                <View nome={code.name} email={code.email} aniversario={code.aniversario} cargo={code.cargo} />
+                                <Edit id={code.id} nome={code.name} email={code.email} aniversario={code.aniversario} cargo={code.cargo} />
+                            </HStack>
                         </GridItem>
 
 

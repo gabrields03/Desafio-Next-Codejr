@@ -76,7 +76,7 @@ import {
             </ModalBody>
   
             <ModalFooter>
-              <Button onClick={onClose}>Cancel</Button>
+              <Button onClick={onClose} bg={"red"} _hover={{bg: "#9F1116"}} mr={3} >Cancelar</Button>
             </ModalFooter>
           </ModalContent>
         </Modal>
