@@ -11,6 +11,7 @@ export function Footer() {
             p={12}
             spacing={300}
             justify={"center"}
+            flexDirection={['column', 'column', 'column', 'column', 'column', 'column', 'row', 'row']}
         >
             <Stack
                 spacing={0}
@@ -22,7 +23,7 @@ export function Footer() {
 
             </Stack>
             <Stack
-                w={"40%"}
+                w={["100%", "100%", "100%", "100%","100%","40%","40%","40%"]}
                 spacing={5}
             >
                 <Stack

@@ -16,8 +16,6 @@ export default function Contato() {
             <Stack
                 as={"main"}
                 spacing={20}
-
-
             >
 
                 <Stack
@@ -33,16 +31,17 @@ export default function Contato() {
                         align={"center"}
                         w={"90%"}
                         spacing={20}
+                        flexDirection={['column', 'column', 'column', 'column', 'column', 'row', 'row', 'row']}
                     >
-                        <InputIndex label={"Nome"} type={"text"} w={"33%"} placeholder={""} />
-                        <InputIndex label={"Email"} type={"email"} w={"33%"} placeholder={""} />
-                        <InputIndex label={"Assunto"} type={"text"} w={"33%"} placeholder={""} />
+                        <InputIndex label={"Nome"} type={"text"} w={["90%", "90%", "90%", "90%", "90%", "33%", "33%", "33%"]} placeholder={""} />
+                        <InputIndex label={"Email"} type={"email"} w={["90%", "90%", "90%", "90%", "90%", "33%", "33%", "33%"]} placeholder={""} />
+                        <InputIndex label={"Assunto"} type={"text"} w={["90%", "90%", "90%", "90%", "90%", "33%", "33%", "33%"]} placeholder={""} />
                     </HStack>
                     <Stack
                         w={"90%"}
                     >
                         <InputTextArea label={"Mensagem"} w={"100%"} />
-                        <ButtonLogin textButton={"Enviar"} href={"#"} color={"#1EB01B"} colorHover={"#328030"} w={"10%"} />
+                        <ButtonLogin textButton={"Enviar"} href={"#"} color={"#1EB01B"} colorHover={"#328030"} w={["90%", "90%", "90%", "90%", "90%", "10%", "10%", "10%"]} />
                     </Stack>
                 </Stack>
 
@@ -50,7 +49,7 @@ export default function Contato() {
                     as={"section"}
                     align={"left"}
                     w={"100%"}
-                    px={24}
+                    px={[0,0,0,0,0,24,24,24]}
                     spacing={10}
                 >
                     <Stack

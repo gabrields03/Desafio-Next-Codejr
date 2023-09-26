@@ -3,7 +3,7 @@ import { FormControl, FormLabel, Input, Textarea, border } from "@chakra-ui/reac
 interface InputIndexProps{
     label: string
     type: string
-    w: string
+    w: any
     placeholder: string
 }
 

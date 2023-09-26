@@ -6,7 +6,7 @@ interface ButtonLoginProps{
     href: string
     color: string
     colorHover: string
-    w: string
+    w: any
 }
 
 export function ButtonLogin({ textButton, href, color, colorHover, w }: ButtonLoginProps){
