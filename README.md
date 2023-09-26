@@ -1,3 +1,9 @@
+## Desafio de Next - Codejr 2023.2
+
+O desafio consiste em criar o front de um e-commerce e consumir uma API, implementando as ações de um CRUD sobre as informações recebidas. O projeto foi criado utilizando Nextjs, ChakraUi e Json Server.
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
